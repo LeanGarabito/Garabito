@@ -1,0 +1,17 @@
+{% extends "inicio.html" %}
+
+{% block titulo %}
+Crear auto
+{% endblock titulo  %}
+
+{% block contenido %}
+Crear auto:
+<form action={% url "crear_autos" %} method="POST">
+    {% csrf_token %}
+{{form}}
+<input type="submit" value = "Enviar">
+</form>
+{% endblock contenido %}
+
+
+
